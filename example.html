@@ -1,0 +1,366 @@
+<!-- TODO : DarkMode -map  -->
+
+<!-- Légende :
+"* #" : partition page html (ex body)
+"*"            : nouvel élément important  
+"#"       : nouvel elément quelconque
+-->
+
+<!-- ! Page squelette d'un dashboard avec l'utilisation echarts -->
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="icon" href="dist/bootstrap-icons/tree.svg">
+
+
+    <!-- * # Import des librairie, ficher css et script JS #-->
+
+    <!-- Java Script-->
+    <script language="JavaScript" type="text/javascript" src="./dist/jquery/jquery-3.6.0.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="./js/navbar.js"></script>
+    <script language="JavaScript" type="text/javascript" src="./js/animation.js"></script>
+    <!--  -->
+
+    <!-- style -->
+    <link rel="stylesheet" href="./dist/global.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/checkbox-darkmode.css">
+    <!--  -->
+
+    <!-- dge-dataviz -->
+    <script defer src='dist/dge-dataviz-components/dge-all.js'></script>
+    <!--  -->
+
+    <!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="dist/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="dist/bootstrap-icons/bootstrap-icons.css">
+    <script language="JavaScript" type="text/javascript" src="./dist/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="./dist/bootstrap/js/bootstrap.min.js"></script>
+    <!--  -->
+
+    <!-- animation -->
+    <link rel="stylesheet" href="dist/aos-master/dist/aos.css">
+    <script script language="JavaScript" type="text/javascript" src="dist/aos-master/dist/aos.js"></script>
+
+    <!--  -->
+
+
+
+
+    <!-- * # -->
+
+
+    <title>Squelette DashBoard ECharts</title> <!-- Titre de la page. Il apparait comme le nom de l'onglet -->
+
+</head>
+
+
+<!-- * # haut de page # -->
+<header>
+
+    <!-- *  Nav Bar  -->
+
+    <!-- # Image de fond #-->
+    <div class="rect bg-image " id="img" style="background-image: url('./img/Foret11.jpg'); height: 150px;"></div>
+
+
+    <nav class="navbar navbar-expand fixed-top navbar-dark">
+
+
+        <div class="collapse navbar-collapse">
+            <a class="ps-2 navbar-brand" href="#">
+                <amg class="bi bi-tree ">
+            </a>
+            <a class="nav-link active text-white" href="./index.html">DGE </span></a>
+            <a class="nav-link text-white" href="#">Example <span class="sr-only">(Actuellement)</a>
+        </div>
+
+        <!-- # Image  qui permet le retour à l'acceuil ici l'arbre (icone bootstrap)#-->
+
+
+        <div>
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="label " style="background-color: rgba(0, 0, 0, 0.373);">
+                <i class="fas bi-moon"></i>
+                <i class='fas bi bi-sun'></i>
+                <div class='ball'>
+            </label>
+            <script src="js/darkmode.js"></script>
+        </div>
+
+        </div>
+
+
+        <!-- #Lien vers les différentes pages # -->
+
+
+        <!-- check box darkmode  -->
+
+
+
+    </nav>
+    </div>
+
+    <!--*  Fin Nav Bar  -->
+
+</header>
+<!-- * # Fin haut de page # -->
+
+
+<!-- * # Début de la page # -->
+
+<body>
+
+
+
+    <!-- * Titre Dashboard -->
+    <section class="py-5 text-center container " data-aos="fade-up" data-aos-duration="1000">
+        <div class="col-lg-6 col-md-8 m-auto border-start border-primary border-5 rounded shadow p-2">
+            <h1 class="fw-light inline p-3">Squelette DashBoard</h1>
+            <p class="lead text-muted ">Ce Projet, a pour but d'exploiter la technologie <a
+                    href="https://www.datagrandest.fr/tools/dge-dataviz-components/documentation/index.html">
+                    DGE-DataGrandEst</a>.
+                <br> Il utilise les données géo2france : arbre-plan.
+            </p>
+        </div>
+    </section>
+    <!-- * -->
+
+
+    <!-- * Début tableau  -->
+    <!-- Sous Bootstrap5 chaque ligne est composé de 12 slots.(------------) 
+            "x" correspond à un slot remplis, "-" à un slot vide, "|" à un changement de colonne -->
+    <!-- Pour le responsive : lg = écran large et sm :écran small -->
+    <div class="container ">
+
+        <!-- # Première ligne (lg : xxxxxx|-xxxxx)# -->
+        <div class="row justify-content-around  mb-5">
+            <!--margin-bot 5 -->
+
+            <!-- # Première colonne #-->
+            <!-- lg : 6 slots et sm : 12 slots -->
+            <div class=" col-sm-12 col-lg-6 m-auto p-5 shadow" data-aos="fade-right" data-aos-duration="1000">
+                <dge-text localcss="true" id="dge-text-light"
+                    text="Le dispositif d’appel à projets pour le plan arbres est ouvert tout au long de l’année jusqu’en 2023. Déposez vos demandes de subvention pour vos projets de plantations d’arbres et d’arbustes locaux !
+							  Pour lutter contre les effets du changement climatique, la Région a lancé le 19 avril 2020 le plan arbres, mobilisant les collectivités locales, opérateurs publics, lycées privés, associations, maisons familiales et rurales en faveur du reboisement du territoire."
+                    title="L'appel à projet" />
+            </div>
+
+            <!-- # Deuxième colonne #-->
+            <!--  lg : 5 slots et sm : 12 slots-->
+            <div class="col-sm-12 col-lg-5 m-auto shadow " data-aos="fade-left" data-aos-duration="1000">
+                <dge-image id="dge-image-light" localcss="true"
+                    src="https://www.hautsdefrance.fr/app/uploads/2020/11/2019_12_12_Festival_de_larbre_Cassel_WAEGHEMACKER_Claude_Hdf0026.jpg"
+                    </dge-image>
+            </div>
+
+
+        </div>
+        <!-- # Fin première ligne #-->
+
+
+        <!-- # Deuxième lignes  # (lg : xxxxxx|-xxxxx)-->
+        <div class="row justify-content-around ">
+
+            <!-- # Première Colonne (lg : 6 slots et sm : 6 ) #-->
+            <div class="col-6 shadoy border-5 rounded ">
+
+                <!-- # Début carousel #-->
+                <!-- Le carousel est composé de 2 slides. L'utilisateurs peut naviguer entre les slide à l'aide des flèches.  -->
+                <div id="carousel"
+                    class="carousel carousel-dark slide border-start border-primary border-5 rounded shadow"
+                    data-bs-ride="carousel" data-aos="zoom-in" data-aos-duration="1000">
+
+                    <!--  Indicators/dots -->
+
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0"
+                            class="active bg-secondary"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"
+                            class="bg-secondary "></button>
+                    </div>
+
+
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+
+                        <!-- # Carousel page 1 # -->
+                        <div class="carousel-item active h-75 mb-5">
+
+                            <dge-figure localcss="true" id="dge-figure-light" api="wfs"
+                                url="https://www.geo2france.fr/geoserver/geo2france/ows"
+                                datasets="geo2france:plan_arbre_surf" max="500" icon="name:tree;color:green"
+                                fields="title" operation="count|title" unit="projets"
+                                text="Nombre total de projets financés" />
+
+                        </div>
+
+                        <!-- # Carousel page 2 # -->
+                        <div class="carousel-item h-75 mb-5">
+
+                            <dge-figure id="dge-figure-light" localcss="true" api="wfs"
+                                url="https://www.geo2france.fr/geoserver/geo2france/ows"
+                                datasets="geo2france:plan_arbre_surf" max="500" icon="name:tree;color:green"
+                                fields="feature_id,participatif" operation="count|feature_id*100"
+                                where="participatif='Oui' or participatif='oui'" unit="projets"
+                                text="Nombre total de projets participatifs" />
+
+                        </div>
+
+                    </div>
+
+                    <!-- Left and right controls/icons -->
+                    <!-- les controleur du caroussel sont dans le style.css -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon mt-0"> </span>
+                    </button>
+
+                </div>
+
+            </div><!-- # Fin première colonne # -->
+
+
+
+            <!-- # Deuxième Colonne (lg : 5slots et sm : 5 ) #-->
+            <div class="col-5 shadow border-start border-success border-5 rounded " data-aos="zoom-in"
+                data-aos-duration="1000">
+                <dge-figure id="dge-figure-light"
+                    attribution="Région Hauts-de-France|https://www.hautsdefrance.fr/million-arbres-plan/" api="wfs"
+                    url="https://www.geo2france.fr/geoserver/geo2france/ows" datasets="plan_arbre_surf" max="500"
+                    icon="name:cash-coin;color:green;" fields="cout_global" operation="sum|cout_global" unit="€"
+                    localcss="1" text="Coût" />
+            </div>
+
+
+
+        </div><!-- # Fin deuxième ligne # -->
+
+
+        <!-- # Troisème ligne (xxx-|xxx-|xxx-)#-->
+        <div class="row justify-content-around mt-5 mb-5">
+
+            <!-- # Première Colonne (lg : 3 slots et sm : 3 slots ) #-->
+            <div class="col-lg-3 col-sm-4 shadow  border-start border-secondary border-5 rounded" data-aos="flip-left"
+                data-aos-duration="1500">
+                <dge-figure id="dge-figure-light"
+                    attribution="Région Hauts-de-France|https://www.hautsdefrance.fr/million-arbres-plan/" api="wfs"
+                    url="https://www.geo2france.fr/geoserver/geo2france/ows" datasets="plan_arbre_surf" max="500"
+                    icon="name:tree-fill;color:green" fields="nb_non_fruitier" operation="sum|nb_non_fruitier"
+                    localcss="1" text="Arbre (non fruitiers) plantés">
+                    />
+            </div>
+
+            <!-- # Deuxième Colonne (lg : 3 slots et sm : 4 ) #-->
+            <div class="col-lg-3 col-sm-4 shadow border-start border-warning border-5 rounded " data-aos="flip-right"
+                data-aos-duration="1500">
+                <dge-figure id="dge-figure-light"
+                    attribution="Région Hauts-de-France|https://www.hautsdefrance.fr/million-arbres-plan/" api="wfs"
+                    url="https://www.geo2france.fr/geoserver/geo2france/ows" datasets="plan_arbre_surf" max="500"
+                    icon="name:tree-fill;color:green" fields="nb_frutier" operation="sum|nb_frutier" unit=""
+                    localcss="1" text="Arbre (fruitiers) plantés">
+                    />
+            </div>
+
+            <!-- # Troisième Colonne (lg : 3 slots et sm : 4 ) #-->
+            <div class="col-lg-3 col-sm-4 shadow border-start border-info border-5 rounded " data-aos="flip-left"
+                data-aos-duration="1500">
+                <dge-figure id="dge-figure-light"
+                    attribution="Région Hauts-de-France|https://www.hautsdefrance.fr/million-arbres-plan/" api="wfs"
+                    url="https://www.geo2france.fr/geoserver/geo2france/ows" datasets="plan_arbre_surf" max="500"
+                    icon="name:aspect-ratio;color:green" fields="lineaire_haie" operation="sum|lineaire_haie" unit="m"
+                    localcss="1" text="Linéaire plantés">
+                    />
+            </div>
+
+
+
+        </div><!-- # Fin troisème ligne #-->
+
+        <!-- # Quatrième ligne (xxxxxx-xxxxx)# -->
+        <div class="row mb-5">
+            <!--margin bot 5 -->
+
+            <!-- # Première colonne(lg : 6 slots et sm : 12 ) # -->
+            <div class="col-lg-6 col-sm-12 shadow " data-aos="zoom-out" data-aos-duration="1000">
+
+
+                <dge-chart id="dge-chart-light" localcss="1" title="Coût global par type de porteur de projet"
+                    attribution="Région Hauts-de-France|https://www.hautsdefrance.fr/million-arbres-plan/" api="wfs"
+                    url="https://www.geo2france.fr/geoserver/geo2france/ows" max="1500" datasets="plan_arbre_surf"
+                    fields="dispositif_soutien,type_porteur,cout_global,particip_financ" x="type_porteur"
+                    y="SUM(cout_global),cout|SUM(particip_financ),part" series="Coût global|Participation"
+                    groupby="type_porteur" chart="bar|line" />
+
+            </div>
+
+            <!-- #deuxième colonne (lg : 5 slots et sm : 12 ) #-->
+            <!-- map height = taille vertical  -->
+            <div class="col-lg-5 col-sm-12 m-auto  shadow " data-aos="zoom-out" data-aos-duration="1000">
+
+                <dge-map id="dge-map-light" height="500px" title="Plan Arbre" localcss="1"
+                    attributions="Région Hauts-de-France|https://www.hautsdefrance.fr/million-arbres-plan/|OpenStreetMap,https://www.openstreetmap.org/copyright"
+                    center="50|2.9" zoom="8" url="https://www.geo2france.fr/geoserver/wms" api="wms"
+                    layers="plan_arbre_surf" layersname="Plan arbres" styles="plan_arbre_prop" format="image/png"
+                    queryable="plan_arbre_surf" fields="dispositif_soutien,type_porteur,cout_global,particip_financ"
+                    labels="DISPOSITIF,TYPE,COUT,PARTICIPATION" baselayer="https://osm.geo2france.fr/mapcache/?,grey" />
+            </div>
+        </div><!-- Fin quatrièmeligne -->
+
+
+
+    </div><!--  *Fin tableau -->
+
+
+</body>
+
+<!-- *# Fin de la page # -->
+
+<!-- Remove the container if you want to extend the Footer to full width. -->
+
+<footer id="footer" class="bg-primary text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="bi bi-facebook"></i></a>
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="bi bi-twitter"></i></a>
+
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="bi bi-google"></i></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    class="bi bi-instagram"></i></a>
+
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="bi bi-linkedin"></i></a>
+
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="bi bi-github"></i></a>
+        </section>
+        <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <a class="text-white" href="https://geo2france.fr/">Geo2France</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+
+
+</html>

@@ -1,0 +1,113 @@
+*{
+    transition: background-color 1s;
+}
+
+/* -----------------------------Light ------------------- */
+#dge-figure-light {
+    border: none ;
+
+}
+#dge-figure-light h2 {
+    color: green ;
+    font-weight: bold ;
+    
+
+}
+
+#dge-image-light{
+    border: none;
+
+}
+
+#dge-text-light{
+    border: none;
+    font-size: large;
+    text-align: center;
+}
+
+#dge-text-light h5{
+    font-size: xx-large;
+    color : green ;
+    font-weight: bold ;
+}
+
+#dge-chart-light{
+    border: none ;
+}
+
+#dge-map-light{
+    border: none ;
+}
+
+#dge-table-light{
+    border :none;
+}
+
+/* ----------------------------------------dark------------------------------------------------ */
+
+#dge-figure-dark {
+    border: none;
+    background-color: #212529;
+}
+
+#dge-figure-dark h2 {
+    color: green;
+    font-weight: bold;
+
+}
+
+#dge-image-dark {
+    border: none;
+    background-color: #212529;
+
+}
+
+#dge-text-dark {
+    border: none;
+    font-size: large;
+    text-align: center;
+    background-color: #212529;
+}
+
+#dge-text-dark h5 {
+    font-size: xx-large;
+    color: green;
+    font-weight: bold;
+
+}
+
+#dge-chart-dark {
+    border: none;
+    background-color: #212529;
+}
+
+#dge-map-dark {
+    border: none;
+    background-color: #212529;
+}
+
+#dge-table-dark {
+    background-color: #212529;
+}
+
+
+#dge-table-dark table{
+    color: white !important;
+}
+
+#dge-table-dark table :hover{
+
+    background-color: #6c757d !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+

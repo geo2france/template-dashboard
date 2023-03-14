@@ -1,0 +1,107 @@
+form {
+    position: relative;
+    width: 18rem;
+    top: -15px;
+    left: 40px;
+}
+
+.chosen-value,
+.value-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.chosen-value {
+    font-family: "Ek Mukta";
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 4px;
+    height: 2rem;
+    font-size: 1.1rem;
+    padding: 1rem;
+    background-color: #FAFCFD;
+    opacity: 0.9;
+    border: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.chosen-value::-webkit-input-placeholder {
+    color: #333;
+    
+}
+
+li.bg-secondary:hover{
+    background-color: #292929 !important;
+    cursor: pointer;
+}
+
+input.bg-secondary:hover {
+    background-color: #292929 !important;
+    cursor: pointer;
+}
+
+.chosen-value:hover {
+    background-color: #0245a9 !important;
+    color:white;
+    
+    cursor: pointer;
+}
+
+.chosen-value:hover::-webkit-input-placeholder {
+    color: #333;
+}
+
+.chosen-value:focus,
+.chosen-value.open {
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+    outline: 0;
+    background-color: #0245a9;
+    color: white;
+}
+
+.chosen-value:focus::-webkit-input-placeholder,
+.chosen-value.open::-webkit-input-placeholder {
+    color: white;
+}
+
+.value-list {
+    list-style: none;
+    margin-top: 2.32rem;
+    margin-left:-2rem;
+    width: 20rem;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.value-list.open {
+    max-height: 400px;
+    overflow: auto;
+}
+
+.value-list li {
+    position: relative;
+    height: 4rem;
+    background-color: #FAFCFD;
+    padding: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    opacity: 1;
+}
+
+.value-list li:hover {
+    background-color: #0245a9 ;
+}
+
+
+.value-list li.closed {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    opacity: 0;
+}

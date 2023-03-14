@@ -1,0 +1,60 @@
+:root{
+  --scrollbar : #007BFF;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+.zoom-1:hover{
+  transition: transform .3s !important;
+  transform: scale(1.1) !important;
+}
+
+.zoom-05:hover {
+  transition: transform .3s !important;
+  transform: scale(1.05) !important;
+}
+
+
+*{
+    transition: background-color 1s;
+    
+ 
+}
+
+
+.navbar{
+  position: fixed;
+  width:100%;
+
+
+}
+
+
+/* scrollbar firefox  */
+html {
+  scrollbar-color: var(--scrollbar) white;
+  scrollbar-width: thin;
+
+ 
+}
+
+
+/* scroll bar autre navigateur */
+/* Global */
+html::-webkit-scrollbar {
+  width: 10px;
+  
+}
+
+/* Ascenseur */
+html::-webkit-scrollbar-thumb {
+  background: var(--scrollbar);
+
+  
+
+}
+.label{
+  margin-right: 2rem;
+}
