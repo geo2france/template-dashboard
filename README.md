@@ -1,8 +1,8 @@
 
 # Projet DashBoard G2F
 
-Ce Projet, a pour but d'exploiter la technologie **DGE-DataGrandEst**.
-Il utilise les données géo2france : arbre-plan
+Ce projet cherche à exploiter pleinement les capacités offertes par la technologie DGE-DataGrandEst. Pour ce faire, il s'appuie sur l'intégration et l'utilisation des données fournies par géo2france, en se concentrant spécifiquement sur le jeu de données arbre-plan. En utilisant cette technologie et ces données, le projet cherche à fournir des solutions innovantes dans la dataviz.
+Il utilise différentes bibliothèques comme mentionné ci-dessous :
 
 
 ## ✂️ Les outils utilisés :
